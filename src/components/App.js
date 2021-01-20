@@ -10,7 +10,6 @@ import CrashCushionPage from './views/CrashCushionPage/CrashCushionPage';
 import NotFoundPage from './views/NotFoundPage/NotFoundPage';
 
 
-import MainNav from './views/MainNavBar/MainNavBar';
 import LandingPage from './views/LandingPage/LandingPage';
 import MainNavBar from './views/MainNavBar/MainNavBar';
 
