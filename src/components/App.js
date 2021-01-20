@@ -12,12 +12,13 @@ import NotFoundPage from './views/NotFoundPage/NotFoundPage';
 
 import MainNav from './views/MainNavBar/MainNavBar';
 import LandingPage from './views/LandingPage/LandingPage';
+import MainNavBar from './views/MainNavBar/MainNavBar';
 
 
 function App() {
   return (
     <HashRouter>
-
+      <MainNavBar/>
     {/* switch는 path가없는 라우트를 다른 라우터경우가 아닌경우에 실행시켜줌  */}
     <Switch>
       <Route exact path="/" component={LandingPage}/>
