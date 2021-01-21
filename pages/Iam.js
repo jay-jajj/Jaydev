@@ -36,6 +36,7 @@ function Iam() {
             
             <Imagebox/>
             <UserInputs/>
+        <script id="dsq-count-scr" src="//iam-4.disqus.com/count.js" async></script>
         </div>
     )
 }
