@@ -8,6 +8,7 @@
     font-family: 'MaplestoryOTFLight';
 }
 
+
 #title{
     text-align: center;
     font-weight: bold;
@@ -15,7 +16,7 @@
     color: #000055;
     margin-bottom: 20px;
 }
-#section{
+.section{
     margin-bottom: 20px;
     font-size: 1.2em;
     text-align: center;
@@ -41,4 +42,12 @@
 .highlight{
     font-size: 1.5em;
     color: cornflowerblue;
+}
+.red{
+    color :red;
+}
+
+#shareButtons{
+    margin-left: auto;
+    margin-right: auto;
 }
