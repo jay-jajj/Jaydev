@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'MaplestoryOTFLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+#font{
+    font-family: 'MaplestoryOTFLight';
+}
+
+#title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 5em;
+    color: #000055;
+    margin-bottom: 20px;
+}
+#section{
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 2.5em;
+    
+}
+.firstdesc{
+    font-weight: bold;
+    margin: 20px;
+    font-size: 1.5em;
+    color: #0f51b4;
+}
+.aiImage{
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 400px;
+    background-image: url('../../public/images/Iam/ai.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.highlight{
+    font-size: 1.5em;
+    color: cornflowerblue;
+}

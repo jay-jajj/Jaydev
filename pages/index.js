@@ -6,7 +6,8 @@ import styles from '../styles/Home.module.css'
 // const descriptionEn = "Nice meet you."; Do you want know More?
 const langKo ={
     firstDescription : '만나서 반갑습니다. 저는 풀스택 개발을 공부하고 있는 Jay-JAJJ 라고 합니다.',
-    knowBtn : '더 알고 싶으세요?'
+    knowBtn : '더 알고 싶으세요?',
+    secondDescription : "저는 리액트와 nodejs ...",
 }
 
 

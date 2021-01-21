@@ -9,7 +9,6 @@ export default class RootDocument extends Document {
                     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
                     <meta name="description" content="Dev.log"/>
                     <meta name="keywords" content="blog,react,antd,webpack,css,javascript" />
-                    <link rel="manifest" href="/static/manifest.json" />
                     <link rel="shortcut icon" href="/static/favicon.ico" />
                     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" />
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css" />

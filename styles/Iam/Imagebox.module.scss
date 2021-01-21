@@ -1,0 +1,76 @@
+.uploadOuter {
+    text-align: center;
+    padding: 1vw;
+}
+.dragBox {
+  padding: 1em;
+  font-size: 1.2em;
+  width: 40vw;
+  min-height: 20vw;
+  height: min-content;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  color: #999;
+  border: 1vw dashed #ccc;
+  display: block;
+  input[type="file"] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+}
+
+  
+#preview {
+    text-align: center;
+    img {
+      max-width: 100%
+    }
+}
+
+.uploadImage{
+  background-image: url('../../public/images/Iam/upload.png');
+  background-size: cover;
+  margin-bottom: 1em;
+  width: 20vw;
+  height: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.userImage{
+  position:absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-position: center center;
+  background-size: cover;
+}
+.showing{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.removeButton {
+  background-color: white;
+  margin-top: 1vh;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 5px solid lightcoral;
+  color: lightcoral;
+  border-radius: 5px;
+  width: 20vw;
+  height: fit-content;
+  
+}
+.removeButton:focus{
+  outline: none;
+}
