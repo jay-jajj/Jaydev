@@ -3,6 +3,8 @@ import React from 'react';
 import HamburgerMenu from '../src/components/Iam/HamburgerMenu';
 import Imagebox from '../src/components/Iam/Imagebox';
 import UserInputs from '../src/components/Iam/UserInputs';
+import DisqusComments from '../src/components/Iam/DisqusComments';
+
 import styles from '../styles/Iam/Iam.module.css';
 
 const lang = { 
@@ -36,7 +38,7 @@ function Iam() {
             
             <Imagebox/>
             <UserInputs/>
-        <script id="dsq-count-scr" src="//iam-4.disqus.com/count.js" async></script>
+            <DisqusComments post={{id : "iam", title:"I am?"}}/>
         </div>
     )
 }
