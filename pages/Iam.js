@@ -32,7 +32,7 @@ function Iam() {
         <div id={styles.font}>
             <Head>
                 <title>{lang.title} | {lang.titlesub}</title>
-                
+                <meta name="keywords" content="퍼센트, 평균, 테스트, test, Average" />
                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-600929677ccbef45"></script>
 
             </Head>
