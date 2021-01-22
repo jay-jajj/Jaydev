@@ -1,4 +1,6 @@
 
+import Link from 'next/link';
+
 import styles from '../../../styles/Iam/HamburgerMenu.module.css'
 
 function HamburgerMenu() {
@@ -16,8 +18,8 @@ function HamburgerMenu() {
                             <a href="#"><li>Home</li></a>
                             <a href="#"><li>About</li></a>
                             <a href="#"><li>Info</li></a>
-                            <a href="#"><li>Contact</li></a>
-                            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+                            <Link href="/devlog/home"><li>개발 Blog</li></Link>
+                            <Link href="/"><li>개발자 Homepage</li></Link>
                         </ul>
                 </div>
             </nav>

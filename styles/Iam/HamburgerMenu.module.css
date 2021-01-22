@@ -129,7 +129,7 @@
    padding-top: 125px;
    
    background: cornflowerblue;
-   list-style-type: none;
+   /* list-style-type: none; */
    -webkit-font-smoothing: antialiased;
    /* to stop flickering of text in safari */
    

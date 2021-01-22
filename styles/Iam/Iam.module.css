@@ -1,9 +1,12 @@
+
+
 @font-face {
     font-family: 'MaplestoryOTFLight';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 #font{
     font-family: 'MaplestoryOTFLight';
 }
@@ -24,6 +27,7 @@
     
 }
 .firstdesc{
+    text-align: center;
     font-weight: bold;
     margin: 20px;
     font-size: 1.5em;
@@ -43,11 +47,9 @@
     font-size: 1.5em;
     color: cornflowerblue;
 }
-.red{
-    color :red;
-}
 
-#shareButtons{
-    margin-left: auto;
-    margin-right: auto;
+.shareButtons{
+    height: fit-content;
+    margin: 2vh;
+    text-align: center;
 }
