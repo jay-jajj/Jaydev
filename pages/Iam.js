@@ -5,7 +5,9 @@ import Head from 'next/head';
 import HamburgerMenu from '../src/components/Iam/HamburgerMenu';
 import Imagebox from '../src/components/Iam/Imagebox';
 import UserInputs from '../src/components/Iam/UserInputs';
+import GenderToggle from '../src/components/Iam/GenderToggle';
 import DisqusComments from '../src/components/Iam/DisqusComments';
+import Result from '../src/components/Iam/Result';
 
 import styles from '../styles/Iam/Iam.module.css';
 
@@ -16,17 +18,21 @@ import Axios from 'axios';
 const lang = { 
     title : "나는?",
     titlesub: "% 알려주는 사이트"
-
 }
 
-
-const onSubmitHandler = function(event){
+const result={
     
 }
 
 function Iam() {
 
     const [IsSubmit, setIsSubmit] = useState(false);
+    const onSubmitHandler = function(event){
+        event.preventDefault();
+        document.getElementById("removeButton").style.display = 'none';
+        console.log(event)
+        setIsSubmit(true);
+    }
 
     return (
         <div id={styles.font}>
@@ -47,7 +53,7 @@ function Iam() {
                 <div className={styles.aiImage}></div>
                 외모는 인공지능(AI)이 평가해줍니다.<br>
                 </br>
-                그외의 정보는 <span className={styles.highlight}>KOSIS(국가 통계 포털)</span>의 데이터에 기반하여 알려드립니다.
+                인체정보는 <span className={styles.highlight}>SizeKorea(한국인 인체조사)</span>의 데이터에 기반하여 알려드립니다.
                 
                 <div className={classNames(styles.firstdesc)}>
                 info : 모든 입력창에 정보를 입력할 필요가 없습니다.
@@ -57,35 +63,31 @@ function Iam() {
                 예민한 정보를 공유하면 그렇잖아요. <br></br>
                 <del>그 왜 몸무게라던가, 몸무게라던가, 몸무게라던가...</del>
             </div>
-            {IsSubmit ? <h1>결과창</h1>: 
+            
             <form  onSubmit={onSubmitHandler}>
+                <GenderToggle/>
                 <Imagebox/>
-                <UserInputs/>
-                <button type="submit">제출하기</button>
-                <style jsx>{`
-                // form{
-                //     width : 100%;
-                //     height : fit-content;
-                //     display : flex;
-                //     flex-drirection: column;
-                //     align-items: center;
-                //     justify-content : center;
-                //     text-align : center;
-                // }
-                button{
-                    display : block;
-                    margin-left : auto;
-                    margin-right : auto;
-                    margin-top : 1vh;
-                    color : white; 
-                    font-size : 1.2em;
-                    font-weight : bold;
-                    background-color: cornflowerblue;
-                    border : 5px solid blue;
-                    border-radius : 5px;
-                }`}</style>
+                {IsSubmit ? <Result result = {result}/> : 
+                    <React.Fragment>
+                        <UserInputs/>
+                        <button type="submit">제출하기</button>
+                    </React.Fragment>
+                }
+                 <style jsx>{`
+                    button{
+                        display : block;
+                        margin-left : auto;
+                        margin-right : auto;
+                        margin-top : 1vh;
+                        color : white; 
+                        font-size : 1.2em;
+                        font-weight : bold;
+                        background-color: cornflowerblue;
+                        border : 5px solid blue;
+                        border-radius : 5px;
+                    }`}</style>
             </form>
-            }
+            
             
             <div className={styles.firstdesc}>공유하기</div>
             
@@ -97,7 +99,8 @@ function Iam() {
                  댓글을 통해 <span>많이 많이</span> 알려주세요!
                  <style jsx>{`span{ color:red; }`}</style> 
             </div>
-            <DisqusComments post={{id : "iam", title:"I am?"}}/>
+            <DisqusComments className="disqus" post={{id : "iam", title:"I am?"}}>
+            </DisqusComments>
         </div>
     )
 }

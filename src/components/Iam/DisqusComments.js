@@ -4,7 +4,7 @@ const DisqusComments = ({ post }) => {
   const disqusShortname = "Iam"
 
   const disqusConfig = {
-    url: "https://jay-jajj.disqus.com/count.js",
+    url: "http://disqus.com/by/Jay",
     identifier: post.id, // Single post id
     title: post.title // Single post title
   }
@@ -15,6 +15,11 @@ const DisqusComments = ({ post }) => {
         shortname={disqusShortname}
         config={disqusConfig}
       />
+      <style jsx>{`div{
+        margin-left : auto;
+        margin-right : auto;
+        width : 90vw;
+      }`}</style>
     </div>
   )
 }

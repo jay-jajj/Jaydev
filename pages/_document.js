@@ -6,7 +6,7 @@ export default class RootDocument extends Document {
             <html>
                 <Head>
                     <meta charSet="utf-8" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes" />
+                    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, shrink-to-fit=no" />
                     <meta name="description" content="Dev.log"/>
                     <link rel="shortcut icon" href="/static/favicon.ico" />
                     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" />
@@ -14,7 +14,7 @@ export default class RootDocument extends Document {
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/railscasts.min.css" />
                     {/* 네이버 웹마스터도구 인증용 */}
                     <meta name="naver-site-verification" content="e596132adfe7fc65500d2dab38055a95f1f45126" />
-                </Head>
+                </Head>               
                 <body>
                     <Main />
                     <NextScript />

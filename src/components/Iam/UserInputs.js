@@ -27,7 +27,7 @@ const inputs = [
         name : "salary",
         type : "number",
         comment : "연봉을 입력해주세요.",
-        measure : "원"
+        measure : "만원"
     },
     {   
         name : "iq",
