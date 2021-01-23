@@ -12,7 +12,7 @@ import Result from '../src/components/Iam/Result';
 import styles from '../styles/Iam/Iam.module.css';
 
 import classNames from 'classnames';
-import Axios from 'axios';
+// import Axios from 'axios';
 
 
 const lang = { 
@@ -20,27 +20,36 @@ const lang = {
     titlesub: "% 알려주는 사이트"
 }
 
-const result={
-    
-}
+
 
 function Iam() {
-
+    const [UserData, setUserData] = useState({});
     const [IsSubmit, setIsSubmit] = useState(false);
-    const onSubmitHandler = function(event){
-        event.preventDefault();
+    const onSubmitHandler = function(){
+         setUserData({
+            ...UserData,
+            gender : document.getElementsByName("gender")[0].checked,
+            age :  document.getElementById("age").value,
+            height : document.getElementById("height").value,
+            weight : document.getElementById("weight").value,
+            salary : document.getElementById("salary").value,
+            iq : document.getElementById("iq").value,
+        })
         document.getElementById("removeButton").style.display = 'none';
-        console.log(event)
         setIsSubmit(true);
     }
+    
 
     return (
         <div id={styles.font}>
             <Head>
                 <title>{lang.title} | {lang.titlesub}</title>
                 <meta name="keywords" content="퍼센트, 평균, 테스트, test, Average" />
+                
                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-600929677ccbef45"></script>
-
+                <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+            
             </Head>
             <HamburgerMenu/>
             <div id={styles.title}>{lang.title}</div>
@@ -53,24 +62,29 @@ function Iam() {
                 <div className={styles.aiImage}></div>
                 외모는 인공지능(AI)이 평가해줍니다.<br>
                 </br>
-                인체정보는 <span className={styles.highlight}>SizeKorea(한국인 인체조사)</span>의 데이터에 기반하여 알려드립니다.
-                
-                <div className={classNames(styles.firstdesc)}>
+                인체정보는 <span className={styles.highlight}>SizeKorea(한국인 인체조사)</span>
+                의 데이터에 기반하여 알려드립니다. <br></br><br></br>
+                키는 <span className='red'>큰</span> 순, 몸무게는 <span className='blue'>작은</span> 순, 
+                연봉과 IQ는 <span className='red'>높은</span> 순 으로 상위를 매겼습니다.<br></br>
+                나이는 상위가 아닌 대한민국 인구에  %만큼 알아주시면 감사하겠습니다.<br></br>
+                키와 몸무게는 남녀가 구분되어 분석되며<br></br>
+                IQ와 연봉은 남녀 구분이 없습니다
+                <div className={classNames(styles.firstdesc, 'info')}>
                 info : 모든 입력창에 정보를 입력할 필요가 없습니다.
-                <style jsx>{`div{ color:red; }`}</style> 
                 </div> 
                 입력한 정보만 결과를 알려드립니다.<br></br>
                 예민한 정보를 공유하면 그렇잖아요. <br></br>
                 <del>그 왜 몸무게라던가, 몸무게라던가, 몸무게라던가...</del>
+                <style jsx>{`.red{ color : red; font-weight : bold; font-size : 1.2em} .blue{ color : cornflowerblue; font-weight : bold; font-size : 1.2em} .info{ color:red; }`}</style> 
             </div>
-            
-            <form  onSubmit={onSubmitHandler}>
+                <div>
+               
                 <GenderToggle/>
-                <Imagebox/>
-                {IsSubmit ? <Result result = {result}/> : 
+                <Imagebox set ={setUserData}/>
+                {IsSubmit ? <Result userData={UserData}/> : 
                     <React.Fragment>
                         <UserInputs/>
-                        <button type="submit">제출하기</button>
+                        <button onClick={onSubmitHandler}>제출하기</button>
                     </React.Fragment>
                 }
                  <style jsx>{`
@@ -86,13 +100,13 @@ function Iam() {
                         border : 5px solid blue;
                         border-radius : 5px;
                     }`}</style>
-            </form>
+                </div>
+            
+            
             
             
             <div className={styles.firstdesc}>공유하기</div>
-            
             <div className = { classNames(styles.shareButtons,"addthis_inline_share_toolbox_415r")}></ div>
-            
             <div className={styles.section}>
                 <div>불편한 점이나 개선사항은 댓글을 통해서 알려주세요!</div>
                 그리고 다른 종류의 %도 추가했으면 좋겠다! 싶으신 의견은

@@ -6,7 +6,7 @@ export default class RootDocument extends Document {
             <html>
                 <Head>
                     <meta charSet="utf-8" />
-                    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, shrink-to-fit=no" />
+                    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height,shrink-to-fit=no" />
                     <meta name="description" content="Dev.log"/>
                     <link rel="shortcut icon" href="/static/favicon.ico" />
                     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" />

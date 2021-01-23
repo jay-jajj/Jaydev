@@ -39,7 +39,7 @@ const inputs = [
 
 function createInputBox(index, name, type, comment, measure){
     return ( <div key={index} className={styles.inputBox}>
-                <input  className={classNames(styles.input)}
+                <input id={name} className={classNames(styles.input)}
                         name = {name} type={type}  placeholder={comment}/>
                 {" "}<span>{measure}</span>
                 <style jsx>{`

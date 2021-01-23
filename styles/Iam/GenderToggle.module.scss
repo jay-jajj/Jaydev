@@ -1,24 +1,31 @@
- #gender {
-    margin-left : auto;
-    margin-right : auto;
+#toggleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3vh;
+}
+
+
+input#gender {
     display: none;
-}    
+  }
+  
   #label {
     cursor: pointer;
     display: inline-block;
-    width: 180px;
-    height: 82px;
+    width: 90px;
+    height: 41px;
     box-shadow: 0 0 0 8px #e5e9ea inset;
-    border-radius: 60px;
+    border-radius: 30px;
     position: relative;
   }
   
   .knob {
     position: absolute;
-    width: 82px;
+    width: 41px;
     top: 0;
     left: 0;
-    height: 82px;
+    height: 41px;
     border-radius: 50%;
     box-shadow: 0 0 0 8px #f470a7 inset;
     background-color: #fbd4e6;
@@ -27,34 +34,34 @@
   
   .knob > #i {
     position: absolute;
-    width: 8px;
-    height: 36px;
+    width: 4px;
+    height: 18px;
     top: 100%;
     background-color: #f470a7;
-    left: calc(50% - 4px);
+    left: calc(50% - 2px);
   }
   
   .knob > #i:before,
   .knob > #i:after {
-    width: 12px;
+    width: 6px;
     position: absolute;
     top: 42%;
     content: "";
-    height: 8px;
+    height: 4px;
     background-color: #f470a7;
   }
   
   .knob > #i:before {
-    left: 8px;
+    left: 4px;
   }
   .knob > #i:after {
-    left: -12px;
+    left: -6px;
   }
   
   #gender:checked + #label > .knob {
     box-shadow: 0 0 0 8px #a1c6dd inset;
     background-color: #e2ecf4;
-    transform: translateX(98px) rotate(-140deg);
+    transform: translateX(49px) rotate(-140deg);
   }
   
   #gender:checked + #label > .knob > #i {
@@ -67,14 +74,14 @@
   }
   
   #gender:checked + #label > .knob > #i:after {
-    top: 29px;
-    width: 24px;
-    left: -14px;
+    top: 14.5px;
+    width: 12px;
+    left: -7px;
     transform: rotate(45deg);
   }
   #gender:checked + #label > .knob > #i:before {
-    top: 26px;
-    width: 24px;
+    top: 13px;
+    width: 12px;
     left: 0px;
     transform: rotate(134deg);
   }
