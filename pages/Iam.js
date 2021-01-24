@@ -52,7 +52,8 @@ function Iam() {
                      {/*구글 애널리틱스 */}
                     {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
                     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TFKYEPTLC"></script>
-
+                    {/* 구글 애드센스 */}
+                    <script data-ad-client="ca-pub-7489851553699369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             </Head>
             <HamburgerMenu/>
             <div id={styles.title}>{lang.title}</div>
@@ -122,7 +123,7 @@ function Iam() {
                 data-ad-width   = "320" 
                 data-ad-height  = "100"></ins> 
             <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-            <style jsx>{`.kakao_ad_area{display : none} .ad1{width : 50vw; margin : auto;}`}</style>
+            <style jsx>{`.kakao_ad_area{display : none} .ad1{width : 320px; margin : auto;}`}</style>
             </div>
             <DisqusComments className="disqus" post={{id : "iam", title:"I am?"}}>
             </DisqusComments>
