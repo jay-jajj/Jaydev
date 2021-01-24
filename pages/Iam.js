@@ -52,13 +52,7 @@ function Iam() {
                      {/*구글 애널리틱스 */}
                     {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
                     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TFKYEPTLC"></script>
-                    <script>
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments)}
-                        gtag('js', new Date());
-                        gtag('config', 'G-7TFKYEPTLC');
-                    </script>
-                    
+
             </Head>
             <HamburgerMenu/>
             <div id={styles.title}>{lang.title}</div>
