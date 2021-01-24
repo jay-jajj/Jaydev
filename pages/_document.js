@@ -16,6 +16,8 @@ export default class RootDocument extends Document {
                     <meta name="naver-site-verification" content="e596132adfe7fc65500d2dab38055a95f1f45126" />
                     {/* 구글 서치 콘솔 인증 */}
                     <meta name="google-site-verification" content="ZYUljzV-2xliIectfEvmRB0hSBicse5UvhgEaDBv1WU" />
+                 
+
                 </Head>               
                 <body>
                     <Main />

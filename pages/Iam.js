@@ -49,7 +49,15 @@ function Iam() {
                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-600929677ccbef45"></script>
                 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-            
+                   {/*구글 애널리틱스 */}
+                    {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TFKYEPTLC"></script>
+                    <script>
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments)}
+                        gtag('js', new Date());
+                        gtag('config', 'G-7TFKYEPTLC');
+                    </script>
             </Head>
             <HamburgerMenu/>
             <div id={styles.title}>{lang.title}</div>
