@@ -116,6 +116,14 @@ function Iam() {
                  댓글을 통해 <span>많이 많이</span> 알려주세요!
                  <style jsx>{`span{ color:red; }`}</style> 
             </div>
+            <div className="ad1">
+            <ins class="kakao_ad_area" 
+                data-ad-unit    = "DAN-Y0jCS7TkwR3dx92Q" 
+                data-ad-width   = "320" 
+                data-ad-height  = "100"></ins> 
+            <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+            <style jsx>{`.kakao_ad_area{display : none} .ad1{width : 50vw; margin : auto;}`}</style>
+            </div>
             <DisqusComments className="disqus" post={{id : "iam", title:"I am?"}}>
             </DisqusComments>
         </div>
