@@ -58,6 +58,7 @@ function Iam() {
                         gtag('js', new Date());
                         gtag('config', 'G-7TFKYEPTLC');
                     </script>
+                    
             </Head>
             <HamburgerMenu/>
             <div id={styles.title}>{lang.title}</div>
