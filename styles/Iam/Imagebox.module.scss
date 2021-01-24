@@ -53,12 +53,7 @@
   background-position: center center;
   background-size: cover;
 }
-.showing{
-  display: block;
-}
-.hide{
-  display: none;
-}
+
 .removeButton {
   background-color: white;
   margin-top: 1vh;
@@ -73,4 +68,20 @@
 }
 .removeButton:focus{
   outline: none;
+}
+.loadingbox{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left : 50%; 
+  transform:translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide{
+  display: none;
 }

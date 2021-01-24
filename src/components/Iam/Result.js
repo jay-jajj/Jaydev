@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+
 
 const pallet = ["#FF0000", "#FF5E00", "#FFBB00", "#FFE400", "#ABF200", "#1DDB16", "#00D8FF", "#0054FF", "#0100FF", "#5F00FF", "#FF00DD", "#FF007F"];
 
@@ -303,22 +303,6 @@ function getSalaryPosition(salary){
     }
 }
 
-
-
-async function getFacePosition(value){
-   const result = await value.then((data) =>{
-        const high = +data[0].probability.toFixed(2);
-        const middle = +data[1].probability.toFixed(2);
-        const low = +data[2].probability.toFixed(2);
-        console.log(high, middle, low);
-        const percent = (2 - (high*2+middle)) * 100 / 2;
-        return { value : `${percent}%`}
-    }
-    );
-    console.log(result)
-    return result;
-}
-
 function getIqPosition(iq){
     if(iq > 145){       
         return {      
@@ -362,43 +346,57 @@ function getIqPosition(iq){
         }
     }
 }
+function getFacePosition(value, gender){
+     const high = value[0];
+     const middle = value[1];
+     const percent = ((2 - (high * 2 + middle)) * 100 / 2).toFixed(2)
+    return { 
+               value : ` 상위 ${percent}%`, 
+               color : gender ? "cornflowerblue" : "pink",
+           }
+}
 
 function createResultBox(name, value, gender){
     let result;
-    let reusltName;
+    let resultName;
     switch (name){
         case 'age':
-            reusltName = "나이";
+            resultName = "나이";
             result = getAgePosition(value);
             break
         case 'height':
-            reusltName = "키";
+            resultName = "키";
             result = getHeightPosition(value, gender);
             break
         case 'weight':
-            reusltName = "몸무게";
+            resultName = "몸무게";
             result = getWeightPosition(value, gender);
             break
         case 'salary':
-            reusltName = "연봉";
+            resultName = "연봉";
             result = getSalaryPosition(value);
             break
         case 'iq':
-            reusltName = "IQ";
+            resultName = "IQ";
             result = getIqPosition(value);
             break  
         case 'face':
-            reusltName = "외모";
-            result = getFacePosition(value);
+            resultName = "외모";
+            result = getFacePosition(value, gender);
         break           
     }
-        console.log(result.value);
-    return <div className="resultBox"> 
-                  <span>{reusltName} : {result.value}</span> 입니다.
+    
+    if(resultName === "외모"){
+
+    }else{
+        
+    }
+    return <div key={resultName} className="resultBox"> 
+                  <span>{resultName} : {result?.value}</span> 입니다.
                   <style jsx>{`
                     .resultBox {text-align : center}
                     span{ font-weight : bold; font-size : 1.3em; color : ${result?.color || "black"}}`}</style>
-            </div>;
+    </div>;
 }
 
 function makeResultList(obj){
