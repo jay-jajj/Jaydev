@@ -44,7 +44,20 @@ function Iam() {
         <div id={styles.font}>
             <Head>
                 <title>{lang.title} | {lang.titlesub}</title>
-                <meta name="keywords" content="퍼센트, 평균, 테스트, test, Average" />
+                <meta name="subject" content="대한민국에 나는 몇퍼센트 일까? 지금 알아보세요!"/>
+                <meta name="author" content="jay-jajj"/>
+                <meta name="description" content="대한민국에서 나는 몇퍼센트인지 지금 알려드립니다! 사진 데이터는 그 어디에도 전송되지 않습니다. 
+                인공지능이 얼굴을 평가해주고 나의 키, 몸무게, IQ, 연봉등을 알려드립니다. 
+                심심할때 하면 더 재밌고 공유하면 배로 재밌는 테스트 지금 해보세요!"/>
+                <link rel="canonical" href="https://jay-jajj.ga/iam" />
+                <meta property="og:url" content="https://jay-jajj.ga/iam" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="나의 대한민국 상위% 테스트" />
+                <meta property="og:description" content="대한민국에서 나는 몇퍼센트인지 지금 알려드립니다! 사진 데이터는 그 어디에도 전송되지 않습니다. 
+                            인공지능이 얼굴을 평가해주고 나의 키, 몸무게, IQ, 연봉등을 알려드립니다. 
+                            심심할때 하면 더 재밌고 공유하면 배로 재밌는 테스트 지금 해보세요!"/>
+                <meta property="og:image" content="/images/Iam/ogimage.png" />
+                <meta name="keywords" content="퍼센트, 평균, 테스트, test, Average, 얼굴평가, 상위, 정도, 인공지능, 얼평, 분포" />
                 <link rel="shortcut icon" href="/images/Iam/favicon.ico" />
                 <script data-ad-client="ca-pub-7489851553699369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-600929677ccbef45"></script>
@@ -56,6 +69,14 @@ function Iam() {
                    
             </Head>
             <HamburgerMenu/>
+            <div className="ad1">
+            <ins className="kakao_ad_area" 
+                data-ad-unit    = "DAN-jckDZc4PfI5b4gTd" 
+                data-ad-width   = "320" 
+                data-ad-height  = "50"></ins> 
+            <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+            </div>
+           
             <div id={styles.title}>{lang.title}</div>
             <div className={styles.section}>
                 <div className={styles.firstdesc}>'대한민국에서 나는 몇퍼센트 일까?' 
@@ -120,6 +141,11 @@ function Iam() {
             <div className="ad1">
             <ins class="kakao_ad_area" 
                 data-ad-unit    = "DAN-Y0jCS7TkwR3dx92Q" 
+                data-ad-width   = "320" 
+                data-ad-height  = "100"></ins> 
+            <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+            <ins className="kakao_ad_area" 
+                data-ad-unit    = "DAN-2I9x2nF8c1auI6Ts" 
                 data-ad-width   = "320" 
                 data-ad-height  = "100"></ins> 
             <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
