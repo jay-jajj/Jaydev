@@ -69,7 +69,7 @@ function Iam() {
                    
             </Head>
             <HamburgerMenu/>
-            <div className="ad1">
+            <div className={styles.kakaoAd}>
             <ins className="kakao_ad_area" 
                 data-ad-unit    = "DAN-jckDZc4PfI5b4gTd" 
                 data-ad-width   = "320" 
