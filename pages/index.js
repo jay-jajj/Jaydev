@@ -7,7 +7,13 @@ import styles from '../styles/Home.module.css'
 const langKo ={
     firstDescription : '만나서 반갑습니다. 저는 풀스택 개발을 공부하고 있는 Jay-JAJJ 라고 합니다.',
     knowBtn : '더 알고 싶으세요?',
-    secondDescription : "저는 리액트와 nodejs ...",
+    sectionParagraph : `저는 현재 부산디지털대학교에 재학중인 학생입니다. 
+    현재 웹 (자바스크립트, 리액트, scss, next.js, node.js(server))을 공부하는 중입니다.
+    데이터베이스는 mongoDB와 MYSQL을 다루어 보았고 공부중에 있습니다. 
+    native 앱으로는 android(java)를 공부했고 간단한 프로젝트를 진행하였습니다.
+    arduino와 rasberrypi를 다루면서 c를 공부했었고
+    알고리즘 문제를 풀어가며 python을 공부 중입니다.
+    그외에도 꾸준히 관심분야를 공부하며 지식을 쌓아가는 중입니다. 피드백과 조언은 언제나 환영입니다.`
 }
 
 
@@ -70,25 +76,13 @@ export default function Home() {
                 <div className={styles['col-left']} id='col-left'>
                     <h2 className={styles.h2}> My info <span className={styles['highlight-secondary']}>Boom!</span>?</h2>
                     <div className={styles.paragraph}>
-                        Lorem ipsum dolor sit amet, elementum curabitur ac vel lacus vulputate,
-                        vivamus tellus ante rutrum dictum. Risus morbi eros etiam vel, ipsum nec porttitor,
-                        sit wisi eu dictum in curae ipsum. <br/><br/>
-                        Non in wisi tellus, proin in id,
-                        consectetuer wisi et orci gravida et augue, amet arcu.
-                        Tortor lectus nulla vitae lectus vestibulum, vel a nulla erat,
-                        tempor ipsum quis vestibulum malesuada quam dictum, et scelerisque mattis justo, nec euismod nisl.
-                        Vitae viverra a. Ante sed dolor, augue a lorem neque eu, sed aliquet euismod fermentum.
-                        Vitae justo fringilla at, vivamus natoque ultrices, elit vivamus vitae fermentum volutpat tellus per,
-                        sed elit massa in, sint torquent duis dolor lacus diam in. Ultrices vitae at sed enim pellentesque,
-                        leo purus magna sit pulvinar sit, vitae dui dui, diam nunc eget non,
-                        lectus sit nulla libero gravida. Sed lacinia augue.
+                        {langKo.sectionParagraph}
                     </div>
                 </div>
                 <div className={styles['col-right']} id='col-right'>
                     <div className={styles['col-right-overlay']}></div>
-                    Lorem ipsum dolor sit amet, 
-                    possim electram cum ad, noster nemore mea ad.
-                      Ex qui velit fabulas verterem.
+                    이 기능은 아직 구현 되지 않았습니다. 
+                    나중에 제 개발블로그가 완성되면 구현 시켜놓겠습니다.
                     <div className={styles['input-container']}>
                         <input className={styles.input} type='text' placeholder='Your name'/>  
                         <input className={styles.input} type='email' placeholder='Email' />

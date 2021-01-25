@@ -17,7 +17,7 @@ import classNames from 'classnames';
 
 const lang = { 
     title : "나는?",
-    titlesub: "% 알려주는 사이트"
+    titlesub: "대한민국에서 나는 몇%?"
 }
 
 
@@ -45,6 +45,7 @@ function Iam() {
             <Head>
                 <title>{lang.title} | {lang.titlesub}</title>
                 <meta name="keywords" content="퍼센트, 평균, 테스트, test, Average" />
+                <link rel="shortcut icon" href="/images/Iam/favicon.ico" />
                 <script data-ad-client="ca-pub-7489851553699369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-600929677ccbef45"></script>
                 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
