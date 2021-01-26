@@ -22,7 +22,7 @@ const lang = {
 
 
 
-function Iam() {
+function Iam(props) {
     const [UserData, setUserData] = useState({});
     const [IsSubmit, setIsSubmit] = useState(false);
     const onSubmitHandler = function(){
@@ -38,6 +38,7 @@ function Iam() {
         document.getElementById("removeButton").style.display = 'none';
         setIsSubmit(true);
     }
+
     
 
     return (
@@ -91,7 +92,7 @@ function Iam() {
                 의 데이터에 기반하여 알려드립니다. <br></br><br></br>
                 키는 <span className='red'>큰</span> 순, 몸무게는 <span className='blue'>작은</span> 순, 
                 연봉과 IQ는 <span className='red'>높은</span> 순 으로 상위를 매겼습니다.<br></br>
-                나이는 상위가 아닌 대한민국 인구에  %만큼 알아주시면 감사하겠습니다.<br></br>
+                나이는 상위가 아닌 내 나이대가 대한민국 인구에 속한만큼을 %로 나타낸것 입니다.<br></br>
                 키와 몸무게는 남녀가 구분되어 분석되며<br></br>
                 IQ와 연봉은 남녀 구분이 없습니다
                 <div className={classNames(styles.firstdesc, 'info')}>
@@ -100,13 +101,20 @@ function Iam() {
                 입력한 정보만 결과를 알려드립니다.<br></br>
                 예민한 정보를 공유하면 그렇잖아요. <br></br>
                 <del>그 왜 몸무게라던가, 몸무게라던가, 몸무게라던가...</del>
-                <style jsx>{`.red{ color : red; font-weight : bold; font-size : 1.2em} .blue{ color : cornflowerblue; font-weight : bold; font-size : 1.2em} .info{ color:red; }`}</style> 
+                <div>성별을 먼저 입력해주세요!</div>
+              <style jsx>{`.red{ color : red; font-weight : bold; font-size : 1.2em} .blue{ color : cornflowerblue; font-weight : bold; font-size : 1.2em} .info{ color:red; }`}</style> 
             </div>
                 <div>
                
                 <GenderToggle/>
                 <Imagebox set ={setUserData}/>
-                {IsSubmit ? <Result userData={UserData}/> : 
+                {IsSubmit ?
+                    <React.Fragment>
+                        <Result userData={UserData}/>  
+                        <form>
+                        <button type="submit">다시하기</button>
+                        </form>
+                    </React.Fragment> :
                     <React.Fragment>
                         <UserInputs/>
                         <button onClick={onSubmitHandler}>제출하기</button>
@@ -139,7 +147,7 @@ function Iam() {
                  <style jsx>{`span{ color:red; }`}</style> 
             </div>
             <div className="ad1">
-            <ins class="kakao_ad_area" 
+            <ins className="kakao_ad_area" 
                 data-ad-unit    = "DAN-Y0jCS7TkwR3dx92Q" 
                 data-ad-width   = "320" 
                 data-ad-height  = "100"></ins> 
