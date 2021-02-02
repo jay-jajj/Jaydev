@@ -69,7 +69,7 @@ function Iam(props) {
                     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TFKYEPTLC"></script>
                    
             </Head>
-            <HamburgerMenu/>
+            {/* <HamburgerMenu/> */}
             <div className={styles.kakaoAd}>
             <ins className="kakao_ad_area" 
                 data-ad-unit    = "DAN-jckDZc4PfI5b4gTd" 

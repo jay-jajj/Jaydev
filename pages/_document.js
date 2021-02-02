@@ -17,7 +17,6 @@ export default class RootDocument extends Document {
                     <meta name="google-site-verification" content="ZYUljzV-2xliIectfEvmRB0hSBicse5UvhgEaDBv1WU" />
 
                      {/* 구글 애드센스 */}
-                     
                      <script data-ad-client="ca-pub-7489851553699369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
                 </Head>               
